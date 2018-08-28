@@ -19,6 +19,9 @@
 		4B903E932133D5E1001E26D4 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E922133D5E1001E26D4 /* Dog.m */; };
 		4B903E962133F723001E26D4 /* UIScrollView+MethodForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E952133F723001E26D4 /* UIScrollView+MethodForwarding.m */; };
 		4B903E9C2133F796001E26D4 /* NSObject+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E9B2133F796001E26D4 /* NSObject+ViewController.m */; };
+		4B903E9F21351B89001E26D4 /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E9E21351B89001E26D4 /* Tree.m */; };
+		4B903EA221351BB5001E26D4 /* Flower.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EA121351BB5001E26D4 /* Flower.m */; };
+		4B903EA521354BE5001E26D4 /* Computer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EA421354BE5001E26D4 /* Computer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,12 @@
 		4B903E952133F723001E26D4 /* UIScrollView+MethodForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MethodForwarding.m"; sourceTree = "<group>"; };
 		4B903E9A2133F796001E26D4 /* NSObject+ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewController.h"; sourceTree = "<group>"; };
 		4B903E9B2133F796001E26D4 /* NSObject+ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewController.m"; sourceTree = "<group>"; };
+		4B903E9D21351B89001E26D4 /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		4B903E9E21351B89001E26D4 /* Tree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tree.m; sourceTree = "<group>"; };
+		4B903EA021351BB5001E26D4 /* Flower.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flower.h; sourceTree = "<group>"; };
+		4B903EA121351BB5001E26D4 /* Flower.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flower.m; sourceTree = "<group>"; };
+		4B903EA321354BE5001E26D4 /* Computer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Computer.h; sourceTree = "<group>"; };
+		4B903EA421354BE5001E26D4 /* Computer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Computer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +130,12 @@
 				4B903E8F2133D2F3001E26D4 /* People.m */,
 				4B903E912133D5E1001E26D4 /* Dog.h */,
 				4B903E922133D5E1001E26D4 /* Dog.m */,
+				4B903EA321354BE5001E26D4 /* Computer.h */,
+				4B903EA421354BE5001E26D4 /* Computer.m */,
+				4B903E9D21351B89001E26D4 /* Tree.h */,
+				4B903E9E21351B89001E26D4 /* Tree.m */,
+				4B903EA021351BB5001E26D4 /* Flower.h */,
+				4B903EA121351BB5001E26D4 /* Flower.m */,
 				4B903E942133F723001E26D4 /* UIScrollView+MethodForwarding.h */,
 				4B903E952133F723001E26D4 /* UIScrollView+MethodForwarding.m */,
 				4B903E9A2133F796001E26D4 /* NSObject+ViewController.h */,
@@ -286,11 +301,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B903E902133D2F3001E26D4 /* People.m in Sources */,
+				4B903E9F21351B89001E26D4 /* Tree.m in Sources */,
 				4B903E5E2133C18A001E26D4 /* ViewController.m in Sources */,
 				4B903E932133D5E1001E26D4 /* Dog.m in Sources */,
 				4B903E692133C18A001E26D4 /* main.m in Sources */,
 				4B903E5B2133C18A001E26D4 /* AppDelegate.m in Sources */,
 				4B903E9C2133F796001E26D4 /* NSObject+ViewController.m in Sources */,
+				4B903EA221351BB5001E26D4 /* Flower.m in Sources */,
+				4B903EA521354BE5001E26D4 /* Computer.m in Sources */,
 				4B903E962133F723001E26D4 /* UIScrollView+MethodForwarding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

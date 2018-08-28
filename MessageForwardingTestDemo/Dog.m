@@ -10,24 +10,28 @@
 
 @implementation Dog
 
-- (void)walkOn:(NSString *)road {
-    NSLog(@"people walkOn %@",road);
+- (void)drink {
+    NSLog(@"喝水");
 }
 
-- (void)eat {
-    NSLog(@"eat some foods");
+- (void)playIn:(NSString *)place {
+    NSLog(@"在%@里玩耍",place);
+}
+
+- (void)wakeUpFrom:(NSString *)place when:(NSString *)time {
+    NSLog(@"从%@上醒来当%@来临的时候",place,time);
 }
 
 - (void)sing {
-    NSLog(@"sing a song");
+    NSLog(@"唱歌");
 }
 
-//- (void)sing:(BOOL)b {
-//    if (b) {
-//        NSLog(@"sing a song");
-//    } else {
-//        NSLog(@"sing a sound");
-//    }
-//}
+- (void)danceIn:(NSString *)place {
+    NSLog(@"在%@跳舞",place);
+}
+
+- (void)offDutyFrom:(NSString *)place when:(NSString *)time {
+    NSLog(@"从%@下班当%@的时候",place,time);
+}
 
 @end

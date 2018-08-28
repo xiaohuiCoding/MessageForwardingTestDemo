@@ -10,12 +10,12 @@
 
 @interface Dog : NSObject
 
-- (void)walkOn:(NSString *)road;
-
-- (void)eat;
+- (void)drink;
+- (void)playIn:(NSString *)place;
+- (void)wakeUpFrom:(NSString *)place when:(NSString *)time;
 
 - (void)sing;
-
-//- (void)sing:(BOOL)b;
+- (void)danceIn:(NSString *)place;
+- (void)offDutyFrom:(NSString *)place when:(NSString *)time;
 
 @end

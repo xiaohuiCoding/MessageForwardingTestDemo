@@ -10,10 +10,20 @@
 
 @interface People : NSObject
 
-- (void)walkOn:(NSString *)road;
-
 - (void)eat;
+- (void)workIn:(NSString *)place;
+- (void)sleepOn:(NSString *)place when:(NSString *)time;
+
+- (void)drink;
+- (void)playIn:(NSString *)place;
+- (void)wakeUpFrom:(NSString *)place when:(NSString *)time;
 
 - (void)sing;
+- (void)danceIn:(NSString *)place;
+- (void)offDutyFrom:(NSString *)place when:(NSString *)time;
+
+- (void)run;
+- (void)jump;
+- (void)walk:(NSInteger)distance;
 
 @end
