@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseObject.h"
 
 @interface People : NSObject
 
@@ -25,5 +26,7 @@
 - (void)run;
 - (void)jump;
 - (void)walk:(NSInteger)distance;
+
+- (void)crashHaHaHa;
 
 @end

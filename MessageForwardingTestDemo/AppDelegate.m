@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "People.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController *vc = [[ViewController alloc] init];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = navC;
+    [self.window makeKeyAndVisible];
+    
+//    People *p = [[People alloc] init];
+//
+//    //1.动态添加实例方法
+//    [p eat];
     return YES;
 }
 

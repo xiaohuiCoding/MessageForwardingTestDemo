@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B903E5B2133C18A001E26D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E5A2133C18A001E26D4 /* AppDelegate.m */; };
 		4B903E5E2133C18A001E26D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E5D2133C18A001E26D4 /* ViewController.m */; };
-		4B903E612133C18A001E26D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B903E5F2133C18A001E26D4 /* Main.storyboard */; };
 		4B903E632133C18A001E26D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B903E622133C18A001E26D4 /* Assets.xcassets */; };
-		4B903E662133C18A001E26D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B903E642133C18A001E26D4 /* LaunchScreen.storyboard */; };
 		4B903E692133C18A001E26D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E682133C18A001E26D4 /* main.m */; };
 		4B903E732133C18B001E26D4 /* MessageForwardingTestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E722133C18B001E26D4 /* MessageForwardingTestDemoTests.m */; };
 		4B903E7E2133C18B001E26D4 /* MessageForwardingTestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E7D2133C18B001E26D4 /* MessageForwardingTestDemoUITests.m */; };
@@ -22,6 +20,13 @@
 		4B903E9F21351B89001E26D4 /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E9E21351B89001E26D4 /* Tree.m */; };
 		4B903EA221351BB5001E26D4 /* Flower.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EA121351BB5001E26D4 /* Flower.m */; };
 		4B903EA521354BE5001E26D4 /* Computer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EA421354BE5001E26D4 /* Computer.m */; };
+		4B903EAB2136527C001E26D4 /* NSObject+MessageForwardingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EAA2136527C001E26D4 /* NSObject+MessageForwardingHandler.m */; };
+		4B903EAE213653C2001E26D4 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EAD213653C2001E26D4 /* BaseObject.m */; };
+		4B903ECF2136608B001E26D4 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EBF2136608B001E26D4 /* CustomIOSAlertView.m */; };
+		4B903ED321366519001E26D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B903ED121366519001E26D4 /* LaunchScreen.storyboard */; };
+		4B903ED421366519001E26D4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B903ED221366519001E26D4 /* Main_iPhone.storyboard */; };
+		4B903ED7213666DF001E26D4 /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903ED5213666DF001E26D4 /* Alert.m */; };
+		4B903EE02136A195001E26D4 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EDF2136A195001E26D4 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +52,11 @@
 		4B903E5A2133C18A001E26D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4B903E5C2133C18A001E26D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4B903E5D2133C18A001E26D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4B903E602133C18A001E26D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B903E622133C18A001E26D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4B903E652133C18A001E26D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B903E672133C18A001E26D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B903E682133C18A001E26D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B903E6E2133C18B001E26D4 /* MessageForwardingTestDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageForwardingTestDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B903E722133C18B001E26D4 /* MessageForwardingTestDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageForwardingTestDemoTests.m; sourceTree = "<group>"; };
-		4B903E742133C18B001E26D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B903E792133C18B001E26D4 /* MessageForwardingTestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageForwardingTestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B903E7D2133C18B001E26D4 /* MessageForwardingTestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageForwardingTestDemoUITests.m; sourceTree = "<group>"; };
 		4B903E7F2133C18B001E26D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +74,18 @@
 		4B903EA121351BB5001E26D4 /* Flower.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flower.m; sourceTree = "<group>"; };
 		4B903EA321354BE5001E26D4 /* Computer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Computer.h; sourceTree = "<group>"; };
 		4B903EA421354BE5001E26D4 /* Computer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Computer.m; sourceTree = "<group>"; };
+		4B903EA92136527C001E26D4 /* NSObject+MessageForwardingHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MessageForwardingHandler.h"; sourceTree = "<group>"; };
+		4B903EAA2136527C001E26D4 /* NSObject+MessageForwardingHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MessageForwardingHandler.m"; sourceTree = "<group>"; };
+		4B903EAC213653C2001E26D4 /* BaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
+		4B903EAD213653C2001E26D4 /* BaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
+		4B903EBE2136608B001E26D4 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
+		4B903EBF2136608B001E26D4 /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
+		4B903ED121366519001E26D4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B903ED221366519001E26D4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		4B903ED5213666DF001E26D4 /* Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		4B903ED6213666DF001E26D4 /* Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
+		4B903EDE2136A195001E26D4 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		4B903EDF2136A195001E26D4 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +138,14 @@
 			children = (
 				4B903E592133C18A001E26D4 /* AppDelegate.h */,
 				4B903E5A2133C18A001E26D4 /* AppDelegate.m */,
+				4B903EBE2136608B001E26D4 /* CustomIOSAlertView.h */,
+				4B903EBF2136608B001E26D4 /* CustomIOSAlertView.m */,
+				4B903ED6213666DF001E26D4 /* Alert.h */,
+				4B903ED5213666DF001E26D4 /* Alert.m */,
 				4B903E5C2133C18A001E26D4 /* ViewController.h */,
 				4B903E5D2133C18A001E26D4 /* ViewController.m */,
+				4B903EDE2136A195001E26D4 /* TestViewController.h */,
+				4B903EDF2136A195001E26D4 /* TestViewController.m */,
 				4B903E8E2133D2F3001E26D4 /* People.h */,
 				4B903E8F2133D2F3001E26D4 /* People.m */,
 				4B903E912133D5E1001E26D4 /* Dog.h */,
@@ -140,11 +160,15 @@
 				4B903E952133F723001E26D4 /* UIScrollView+MethodForwarding.m */,
 				4B903E9A2133F796001E26D4 /* NSObject+ViewController.h */,
 				4B903E9B2133F796001E26D4 /* NSObject+ViewController.m */,
-				4B903E5F2133C18A001E26D4 /* Main.storyboard */,
+				4B903EA92136527C001E26D4 /* NSObject+MessageForwardingHandler.h */,
+				4B903EAA2136527C001E26D4 /* NSObject+MessageForwardingHandler.m */,
+				4B903EAC213653C2001E26D4 /* BaseObject.h */,
+				4B903EAD213653C2001E26D4 /* BaseObject.m */,
 				4B903E622133C18A001E26D4 /* Assets.xcassets */,
-				4B903E642133C18A001E26D4 /* LaunchScreen.storyboard */,
 				4B903E672133C18A001E26D4 /* Info.plist */,
 				4B903E682133C18A001E26D4 /* main.m */,
+				4B903ED121366519001E26D4 /* LaunchScreen.storyboard */,
+				4B903ED221366519001E26D4 /* Main_iPhone.storyboard */,
 			);
 			path = MessageForwardingTestDemo;
 			sourceTree = "<group>";
@@ -153,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				4B903E722133C18B001E26D4 /* MessageForwardingTestDemoTests.m */,
-				4B903E742133C18B001E26D4 /* Info.plist */,
 			);
 			path = MessageForwardingTestDemoTests;
 			sourceTree = "<group>";
@@ -273,9 +296,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B903E662133C18A001E26D4 /* LaunchScreen.storyboard in Resources */,
 				4B903E632133C18A001E26D4 /* Assets.xcassets in Resources */,
-				4B903E612133C18A001E26D4 /* Main.storyboard in Resources */,
+				4B903ED321366519001E26D4 /* LaunchScreen.storyboard in Resources */,
+				4B903ED421366519001E26D4 /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +326,9 @@
 				4B903E902133D2F3001E26D4 /* People.m in Sources */,
 				4B903E9F21351B89001E26D4 /* Tree.m in Sources */,
 				4B903E5E2133C18A001E26D4 /* ViewController.m in Sources */,
+				4B903EAE213653C2001E26D4 /* BaseObject.m in Sources */,
+				4B903ED7213666DF001E26D4 /* Alert.m in Sources */,
+				4B903EAB2136527C001E26D4 /* NSObject+MessageForwardingHandler.m in Sources */,
 				4B903E932133D5E1001E26D4 /* Dog.m in Sources */,
 				4B903E692133C18A001E26D4 /* main.m in Sources */,
 				4B903E5B2133C18A001E26D4 /* AppDelegate.m in Sources */,
@@ -310,6 +336,8 @@
 				4B903EA221351BB5001E26D4 /* Flower.m in Sources */,
 				4B903EA521354BE5001E26D4 /* Computer.m in Sources */,
 				4B903E962133F723001E26D4 /* UIScrollView+MethodForwarding.m in Sources */,
+				4B903EE02136A195001E26D4 /* TestViewController.m in Sources */,
+				4B903ECF2136608B001E26D4 /* CustomIOSAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,25 +371,6 @@
 			targetProxy = 4B903E7A2133C18B001E26D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4B903E5F2133C18A001E26D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4B903E602133C18A001E26D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4B903E642133C18A001E26D4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4B903E652133C18A001E26D4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4B903E802133C18B001E26D4 /* Debug */ = {
@@ -474,11 +483,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MessageForwardingTestDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XH.MessageForwardingTestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -488,11 +498,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MessageForwardingTestDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = XH.MessageForwardingTestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
