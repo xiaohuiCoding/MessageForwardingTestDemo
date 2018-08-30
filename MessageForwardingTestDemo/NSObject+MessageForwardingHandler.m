@@ -14,19 +14,24 @@
 
 @implementation NSObject (MessageForwardingHandler)
 
+int count;
+
 //本类中的三行宏是用来消除在自定义的系统类的分类中重写系统方法所报的警告，也可以在 Build Settings/Other Warning Flags中添加"-Wno-objc-protocol-method-implementation"来消除警告
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 
+
+
 void dynamicMethodIMP(id self, SEL _cmd) {
+    count = 1;
     dispatch_async(dispatch_get_main_queue(), ^{
         CustomIOSAlertView *alertView = [[CustomIOSAlertView alloc] init];
         UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 240, 240)];
         customView.backgroundColor = [UIColor redColor];
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 240, 30)];
         label.textAlignment = NSTextAlignmentCenter;
-        label.text = @"程序出现异常，您可选择";
+        label.text = [NSString stringWithFormat:@"程序出现了%d个异常，您可选择",count];
         [customView addSubview:label];
         [alertView setContainerView:customView];
         [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"关闭程序", @"暂时忽略", nil]];
@@ -38,6 +43,7 @@ void dynamicMethodIMP(id self, SEL _cmd) {
             [alertView close];
         }];
         [alertView show];
+        ++ count;
     });
 }
 
