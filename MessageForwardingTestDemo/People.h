@@ -27,6 +27,7 @@
 - (void)jump;
 - (void)walk:(NSInteger)distance;
 
+- (void)normal;
 - (void)crashHaHaHa;
 
 @end

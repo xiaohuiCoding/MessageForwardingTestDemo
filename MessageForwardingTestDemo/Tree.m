@@ -60,65 +60,18 @@ void dynamicMethodIMPLookLikeOrLike(id self, SEL _cmd, id a, id b) {
 
 
 //- (id)forwardingTargetForSelector:(SEL)aSelector {
-//    if (aSelector == @selector(becomeTall)) {
-//        return self.flower;
-//    } else if (aSelector == @selector(absorbNutrientsFrom:)) {
-//        return self.flower;
-//    } else if (aSelector == @selector(dieOn:when:)) {
-//        return self.flower;
-//    } else {
-//        return [super forwardingTargetForSelector:aSelector];
-//    }
+//
 //}
 
 
 
 //- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-//    if (aSelector == @selector(becomeTall)) {
-//        return [[Flower class] methodSignatureForSelector:@selector(becomeTall)];
-//    }
-////    else if (aSelector == @selector(danceIn:)) {
-////        return [self.dog methodSignatureForSelector:@selector(danceIn:)];
-////    } else if (aSelector == @selector(offDutyFrom:when:)) {
-////        return [self.dog methodSignatureForSelector:@selector(offDutyFrom:when:)];
-////    }
-//    else {
-//        return [super methodSignatureForSelector:aSelector];
-//    }
+//
 //}
 //
-////设置目标对象
-////设置方法
-////设置参数
-////有两种处理方式：1.手动转发消息(invokeWithTarget) 或 2.抛出异常(doesNotRecognizeSelector)
-////这种消息转发的优势是：1.可以屏蔽外界传入的参数内容，只在内部给参数赋值 2.可以自定义参数，增加或减少原函数的参数个数
 //
 //- (void)forwardInvocation:(NSInvocation *)anInvocation {
-//    if (anInvocation.selector == @selector(becomeTall)) {
-//        [anInvocation setTarget:[Flower class]];
-//        [anInvocation setSelector:@selector(becomeTall)];
-//        [anInvocation invokeWithTarget:[Flower class]];
-//        //        [anInvocation doesNotRecognizeSelector:@selector(sing)];
-//    }
-//    else if (anInvocation.selector == @selector(danceIn:)) {
-//        [anInvocation setTarget:self.dog];
-//        [anInvocation setSelector:@selector(danceIn:)];
-//        NSString *arg = @"剧院";
-//        [anInvocation setArgument:&arg atIndex:2];
-//        [anInvocation retainArguments];
-//        [anInvocation invokeWithTarget:self.dog];
-//    } else if (anInvocation.selector == @selector(offDutyFrom:when:)) {
-//        [anInvocation setTarget:self.dog];
-//        [anInvocation setSelector:@selector(offDutyFrom:when:)];
-//        NSString *arg1 = @"工厂";
-//        NSString *arg2 = @"晚上八点";
-//        [anInvocation setArgument:&arg1 atIndex:2];
-//        [anInvocation setArgument:&arg2 atIndex:3];
-//        [anInvocation retainArguments];
-//        [anInvocation invokeWithTarget:self.dog];
-//    } else {
-//        [super forwardInvocation:anInvocation];
-//    }
+//
 //}
 
 @end

@@ -14,13 +14,12 @@
 
 @implementation NSObject (MessageForwardingHandler)
 
-//三行宏是用来消除因为在系统类的分类中重写系统方法所报的警告，也可以在 Build Settings/Other Warning Flags中添加"-Wno-objc-protocol-method-implementation"来消除警告
+//本类中的三行宏是用来消除在自定义的系统类的分类中重写系统方法所报的警告，也可以在 Build Settings/Other Warning Flags中添加"-Wno-objc-protocol-method-implementation"来消除警告
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 
 void dynamicMethodIMP(id self, SEL _cmd) {
-    NSLog(@"test");
     dispatch_async(dispatch_get_main_queue(), ^{
         CustomIOSAlertView *alertView = [[CustomIOSAlertView alloc] init];
         UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 240, 240)];
@@ -45,21 +44,11 @@ void dynamicMethodIMP(id self, SEL _cmd) {
 
 
 //+ (BOOL)resolveInstanceMethodNew:(SEL)sel {
-//
 //    BOOL result = [self resolveInstanceMethodNew:sel];
-//
 //    if (!result) {
 //        NSLog(@"NOT RECOGNIZED: %@", NSStringFromSelector(sel));
 //    }
-//
 //    return result;
-////    NSString *selString = NSStringFromSelector(sel);
-////    if (selString && selString.length > 0 && ![selString isEqualToString:@"crashHaHaHa"]) {
-////        class_addMethod(self, sel, (IMP)dynamicMethodIMP, "v@:");
-////        return YES;
-////    } else {
-////        return NO;
-////    }
 //}
 
 
@@ -87,20 +76,23 @@ void dynamicMethodIMP(id self, SEL _cmd) {
         NSMethodSignature *methodSignature = [self methodSignatureForSelectorNew:aSelector];
         NSString *selString = NSStringFromSelector(aSelector);
         
+        //过滤一个特定的方法名，是为了可以故意发送假消息使关闭程序，仅仅是为了做一个用户操作而已，无他。
         if (selString && selString.length > 0 && ![selString isEqualToString:@"crashHaHaHa"]) {
             
-            if (class_addMethod([self class], aSelector, (IMP)dynamicMethodIMP, "v@:")) {
+            BOOL result = class_addMethod([self class], aSelector, (IMP)dynamicMethodIMP, "v@:");
+            if (result) {
                 NSLog(@"动态添加方法成功！");
             }
+            
             if (!methodSignature) {
-                NSLog(@"*** %@ - %@ *** unrecognized selector %s",NSStringFromClass([self class]),NSStringFromSelector(aSelector),__func__);
+                NSLog(@"成功捕获到一个异常，该异常的诊断是 ---> 'reason: -[%@ %@]: unrecognized selector sent to instance %p' \n诊断结果来自方法 ---> '%s'",NSStringFromClass([self class]), NSStringFromSelector(aSelector), self, __func__);
                 
                 methodSignature = [self methodSignatureForSelectorNew:aSelector];
             }
             return methodSignature;
             
         } else {
-            return nil;
+            return [self methodSignatureForSelectorNew:aSelector];
         }
         
     } else {

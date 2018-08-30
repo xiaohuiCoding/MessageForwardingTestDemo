@@ -21,11 +21,16 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
     People *p = [[People alloc] init];
     
-    //1.动态添加实例方法
+//    [p normal];
+    
     [p eat];
+    [p workIn:@"公司"];
+    
+    
+//    [Tree grow];
 }
 
 - (void)viewDidLoad {
@@ -39,7 +44,7 @@
         self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     
         //iOS 11.0后弃用
-        self.automaticallyAdjustsScrollViewInsets = NO;
+//        self.automaticallyAdjustsScrollViewInsets = NO;
     
         //iOS 11.0后新增（在低版本iOS系统中执行此句代码程序会闪退！）
         self.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
@@ -49,10 +54,10 @@
     //测试二：
     
     /***实例方法的调用***/
-    //    People *p = [[People alloc] init];
+//        People *p = [[People alloc] init];
     
     //1.动态添加实例方法
-    //    [p eat];
+//        [p eat];
     //    [p workIn:@"公司"];
     //    [p sleepOn:@"床" when:@"夜晚"];
     //
