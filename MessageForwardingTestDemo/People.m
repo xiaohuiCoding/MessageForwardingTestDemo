@@ -24,6 +24,8 @@
     NSLog(@"normal method execute!");
 }
 
+
+
 //- (id)init {
 //    if (self = [super init]) {
 //        _dog = [[Dog alloc] init];
@@ -46,6 +48,10 @@
 //    NSLog(@"在%@上睡觉当%@来临的时候",a,b);
 //}
 //
+//char * dynamicMethodIMPTest(id self, SEL _cmd) {
+//    return "test";
+//}
+//
 //+ (BOOL)resolveInstanceMethod:(SEL)sel {
 //    if (sel == @selector(eat)) {
 //        class_addMethod(self, sel, (IMP)dynamicMethodIMPEat, "v@:");
@@ -53,15 +59,16 @@
 ////            NSLog(@"吃饭");
 ////        }), "v@:");
 //        return YES;
-//    }
-// if (sel == @selector(workIn:)) {
+//    } else if (sel == @selector(workIn:)) {
 //        class_addMethod(self, sel, (IMP)dynamicMethodIMPWorkIn, "v@:");
 //        return YES;
 //    } else if (sel == @selector(sleepOn:when:)) {
 //        class_addMethod(self, sel, (IMP)dynamicMethodIMPSleepOnWhen, "v@:");
 //        return YES;
-//    }
-//    else {
+//    } else if (sel == @selector(test)) {
+//        class_addMethod(self, sel, (IMP)dynamicMethodIMPTest, "c@:");
+//        return YES;
+//    } else {
 //        return [super resolveInstanceMethod:sel];
 //    }
 //}
@@ -76,8 +83,7 @@
 //        return self.dog;
 //    } else if (aSelector == @selector(wakeUpFrom:when:)) {
 //        return self.dog;
-//    }
-//    else {
+//    } else {
 //        return [super forwardingTargetForSelector:aSelector];
 //    }
 //}

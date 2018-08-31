@@ -21,7 +21,15 @@ int count;
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 
++ (void)load {
+    Method method1 = class_getInstanceMethod([self class], @selector(methodSignatureForSelector:));
+    Method method2 = class_getInstanceMethod([self class], @selector(methodSignatureForSelectorNew:));
+    method_exchangeImplementations(method1, method2);
 
+    Method method3 = class_getInstanceMethod([self class], @selector(forwardInvocation:));
+    Method method4 = class_getInstanceMethod([self class], @selector(forwardInvocationNew:));
+    method_exchangeImplementations(method3, method4);
+}
 
 void dynamicMethodIMP(id self, SEL _cmd) {
     count = 1;
@@ -47,34 +55,6 @@ void dynamicMethodIMP(id self, SEL _cmd) {
     });
 }
 
-
-
-//+ (BOOL)resolveInstanceMethodNew:(SEL)sel {
-//    BOOL result = [self resolveInstanceMethodNew:sel];
-//    if (!result) {
-//        NSLog(@"NOT RECOGNIZED: %@", NSStringFromSelector(sel));
-//    }
-//    return result;
-//}
-
-
-
-////- (id)forwardingTargetForSelector:(SEL)aSelector {
-////
-////}
-
-
-
-+ (void)load {
-    Method method1 = class_getInstanceMethod([self class], @selector(methodSignatureForSelector:));
-    Method method2 = class_getInstanceMethod([self class], @selector(methodSignatureForSelectorNew:));
-    method_exchangeImplementations(method1, method2);
-
-    Method method3 = class_getInstanceMethod([self class], @selector(forwardInvocation:));
-    Method method4 = class_getInstanceMethod([self class], @selector(forwardInvocationNew:));
-    method_exchangeImplementations(method3, method4);
-}
-
 - (NSMethodSignature *)methodSignatureForSelectorNew:(SEL)aSelector {
     
     if (![self respondsToSelector:aSelector]) {
@@ -94,6 +74,7 @@ void dynamicMethodIMP(id self, SEL _cmd) {
                 NSLog(@"成功捕获到一个异常，该异常的诊断是 ---> 'reason: -[%@ %@]: unrecognized selector sent to instance %p' \n诊断结果来自方法 ---> '%s'",NSStringFromClass([self class]), NSStringFromSelector(aSelector), self, __func__);
                 
                 methodSignature = [self methodSignatureForSelectorNew:aSelector];
+                NSLog(@"动态添加的方法的返回值类型是 ---> %@",[NSString stringWithUTF8String:methodSignature.methodReturnType]);
             }
             return methodSignature;
             
