@@ -90,6 +90,12 @@
 //
 //
 //
+////设置目标对象
+////设置方法
+////设置参数
+////这里有两种处理方式：1.手动转发消息(invokeWithTarget) 或 2.抛出异常(doesNotRecognizeSelector)
+////这种消息转发的方式比-forwardingTargetForSelector:有优势，较灵活：1.可以将不同的消息转发给不同的对象 2.可以屏蔽外界传入的参数值，只在内部给参数传值 3.可以增加或减少原对象函数的参数
+//
 //- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
 //    if (aSelector == @selector(sing)) {
 //        return [self.dog methodSignatureForSelector:@selector(sing)];
@@ -107,12 +113,6 @@
 //        return [super methodSignatureForSelector:aSelector];
 //    }
 //}
-//
-////设置目标对象
-////设置方法
-////设置参数
-////这里有两种处理方式：1.手动转发消息(invokeWithTarget) 或 2.抛出异常(doesNotRecognizeSelector)
-////这种消息转发的方式比-forwardingTargetForSelector:有优势，较灵活：1.可以将不同的消息转发给不同的对象 2.可以屏蔽外界传入的参数值，只在内部给参数传值 3.可以增加或减少原对象函数的参数
 //
 //- (void)forwardInvocation:(NSInvocation *)anInvocation {
 //    if (anInvocation.selector == @selector(sing)) {

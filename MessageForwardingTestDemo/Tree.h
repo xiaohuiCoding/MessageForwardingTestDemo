@@ -14,8 +14,12 @@
 + (void)swingWhen:(NSString *)time;
 + (void)lookLike:(NSString *)something orLike:(NSString *)other;
 
++ (char *)test;
+
 + (void)becomeTall;
 + (void)absorbNutrientsFrom:(NSString *)place;
 + (void)dieOn:(NSString *)place when:(NSString *)time;
+
++ (void)becomeThick;
 
 @end

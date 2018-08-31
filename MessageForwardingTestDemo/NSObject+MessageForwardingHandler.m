@@ -29,6 +29,14 @@ int count;
     Method method3 = class_getInstanceMethod([self class], @selector(forwardInvocation:));
     Method method4 = class_getInstanceMethod([self class], @selector(forwardInvocationNew:));
     method_exchangeImplementations(method3, method4);
+    
+    Method method5 = class_getClassMethod([self class], @selector(methodSignatureForSelector:));
+    Method method6 = class_getClassMethod([self class], @selector(methodSignatureForSelectorNew:));
+    method_exchangeImplementations(method5, method6);
+    
+    Method method7 = class_getClassMethod([self class], @selector(forwardInvocation:));
+    Method method8 = class_getClassMethod([self class], @selector(forwardInvocationNew:));
+    method_exchangeImplementations(method7, method8);
 }
 
 void dynamicMethodIMP(id self, SEL _cmd) {
@@ -56,6 +64,46 @@ void dynamicMethodIMP(id self, SEL _cmd) {
 }
 
 - (NSMethodSignature *)methodSignatureForSelectorNew:(SEL)aSelector {
+
+    if (![self respondsToSelector:aSelector]) {
+
+        NSMethodSignature *methodSignature = [self methodSignatureForSelectorNew:aSelector];
+        NSString *selString = NSStringFromSelector(aSelector);
+
+        //过滤一个特定的方法名，是为了可以故意发送假消息使关闭程序，仅仅是为了做一个用户操作而已，无他。
+        if (selString && selString.length > 0 && ![selString isEqualToString:@"crashHaHaHa"]) {
+
+            BOOL result = class_addMethod([self class], aSelector, (IMP)dynamicMethodIMP, "v@:");
+            if (result) {
+                NSLog(@"动态添加方法成功！");
+            }
+
+            if (!methodSignature) {
+                NSLog(@"成功捕获到一个异常，该异常的诊断是 ---> 'reason: -[%@ %@]: unrecognized selector sent to instance %p' \n诊断结果来自方法 ---> '%s'",NSStringFromClass([self class]), NSStringFromSelector(aSelector), self, __func__);
+
+                methodSignature = [self methodSignatureForSelectorNew:aSelector];
+                NSLog(@"动态添加的方法的返回值类型是 ---> %@",[NSString stringWithUTF8String:methodSignature.methodReturnType]);
+            }
+            return methodSignature;
+
+        } else {
+            return [self methodSignatureForSelectorNew:aSelector];
+        }
+
+    } else {
+        return [self methodSignatureForSelectorNew:aSelector];
+    }
+}
+
+- (void)forwardInvocationNew:(NSInvocation *)anInvocation {
+    if ([self respondsToSelector:anInvocation.selector]) {
+        [anInvocation invokeWithTarget:self];
+    } else {
+        [self forwardInvocationNew:anInvocation];
+    }
+}
+
++ (NSMethodSignature *)methodSignatureForSelectorNew:(SEL)aSelector {
     
     if (![self respondsToSelector:aSelector]) {
         
@@ -65,15 +113,17 @@ void dynamicMethodIMP(id self, SEL _cmd) {
         //过滤一个特定的方法名，是为了可以故意发送假消息使关闭程序，仅仅是为了做一个用户操作而已，无他。
         if (selString && selString.length > 0 && ![selString isEqualToString:@"crashHaHaHa"]) {
             
-            BOOL result = class_addMethod([self class], aSelector, (IMP)dynamicMethodIMP, "v@:");
+            Class metaClass = [self superclass];
+            BOOL result = class_addMethod(metaClass, aSelector, (IMP)dynamicMethodIMP, "v@:");
             if (result) {
                 NSLog(@"动态添加方法成功！");
             }
             
             if (!methodSignature) {
-                NSLog(@"成功捕获到一个异常，该异常的诊断是 ---> 'reason: -[%@ %@]: unrecognized selector sent to instance %p' \n诊断结果来自方法 ---> '%s'",NSStringFromClass([self class]), NSStringFromSelector(aSelector), self, __func__);
+                NSLog(@"成功捕获到一个异常，该异常的诊断是 ---> 'reason: +[%@ %@]: unrecognized selector sent to class %p' \n诊断结果来自方法 ---> '%s'",NSStringFromClass(self), NSStringFromSelector(aSelector), self, __func__);
                 
                 methodSignature = [self methodSignatureForSelectorNew:aSelector];
+                
                 NSLog(@"动态添加的方法的返回值类型是 ---> %@",[NSString stringWithUTF8String:methodSignature.methodReturnType]);
             }
             return methodSignature;
@@ -87,7 +137,7 @@ void dynamicMethodIMP(id self, SEL _cmd) {
     }
 }
 
-- (void)forwardInvocationNew:(NSInvocation *)anInvocation {
++ (void)forwardInvocationNew:(NSInvocation *)anInvocation {
     if ([self respondsToSelector:anInvocation.selector]) {
         [anInvocation invokeWithTarget:self];
     } else {

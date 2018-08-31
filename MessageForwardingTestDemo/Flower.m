@@ -22,4 +22,8 @@
     NSLog(@"死于%@当%@到来的时候",place,time);
 }
 
++ (void)becomeThick {
+    NSLog(@"长粗");
+}
+
 @end

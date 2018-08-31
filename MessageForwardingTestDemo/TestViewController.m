@@ -24,12 +24,12 @@
 
     People *p = [[People alloc] init];
     
-//    [p workIn:@"公司"];
-    [p test];
+    [p workIn:@"公司"];
+//    [p test];
     
     
-//    [Tree grow];
-//    [Tree becomeTall];
+    [Tree becomeTall];
+//    [Tree test];
 }
 
 - (void)viewDidLoad {

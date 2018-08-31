@@ -14,4 +14,6 @@
 + (void)absorbNutrientsFrom:(NSString *)place;
 + (void)dieOn:(NSString *)place when:(NSString *)time;
 
++ (void)becomeThick;
+
 @end

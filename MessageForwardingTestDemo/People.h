@@ -14,6 +14,7 @@
 - (void)eat;
 - (void)workIn:(NSString *)place;
 - (void)sleepOn:(NSString *)place when:(NSString *)time;
+
 - (char *)test;
 
 - (void)drink;

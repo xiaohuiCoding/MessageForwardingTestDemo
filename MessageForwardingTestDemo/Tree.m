@@ -18,12 +18,12 @@
 
 @implementation Tree
 
-- (id)init {
-    if (self = [super init]) {
-        _flower = [[Flower alloc] init];
-    }
-    return self;
-}
+//- (id)init {
+//    if (self = [super init]) {
+//        _flower = [[Flower alloc] init];
+//    }
+//    return self;
+//}
 
 
 
@@ -41,8 +41,8 @@
 //
 //+ (BOOL)resolveClassMethod:(SEL)sel {
 //    if (sel == @selector(grow)) {
-////        Class metaClass = objc_getMetaClass("Tree");
-//        Class metaClass = [self superclass];
+//        Class metaClass = objc_getMetaClass("Tree");
+////        Class metaClass = [self superclass];
 //        class_addMethod(metaClass, sel, (IMP)dynamicMethodIMPGrow, "v@:");
 //        return YES;
 //    } else if (sel == @selector(swingWhen:)) {
@@ -57,27 +57,43 @@
 //        return [super resolveClassMethod:sel];
 //    }
 //}
-
-
-
-//将消息转发给某个指定的对象
-//- (id)forwardingTargetForSelector:(SEL)aSelector {
+//
+//
+//
+////将消息转发给某个指定的对象
+//+ (id)forwardingTargetForSelector:(SEL)aSelector {
 //    if (aSelector == @selector(becomeTall)) {
-//        return nil;
+//        return [Flower class];
 //    } else {
 //        return [super forwardingTargetForSelector:aSelector];
 //    }
 //}
-
-
-
-//- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-//    return nil;
+//
+//
+//
+////设置目标对象
+////设置方法
+////设置参数
+////这里有两种处理方式：1.手动转发消息(invokeWithTarget) 或 2.抛出异常(doesNotRecognizeSelector)
+////这种消息转发的方式比-forwardingTargetForSelector:有优势，较灵活：1.可以将不同的消息转发给不同的对象 2.可以屏蔽外界传入的参数值，只在内部给参数传值 3.可以增加或减少原对象函数的参数
+//
+//+ (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+//    if (aSelector == @selector(becomeThick)) {
+//        return [[Flower class] methodSignatureForSelector:@selector(becomeThick)];
+//    } else {
+//        return [super methodSignatureForSelector:aSelector];
+//    }
 //}
 //
-//
-//- (void)forwardInvocation:(NSInvocation *)anInvocation {
-//
+//+ (void)forwardInvocation:(NSInvocation *)anInvocation {
+//    if (anInvocation.selector == @selector(becomeThick)) {
+//        [anInvocation setTarget:[Flower class]];
+//        [anInvocation setSelector:@selector(becomeThick)];
+//        [anInvocation invokeWithTarget:[Flower class]];
+////        [anInvocation doesNotRecognizeSelector:@selector(becomeThick)];
+//    } else {
+//        [super forwardInvocation:anInvocation];
+//    }
 //}
 
 @end
