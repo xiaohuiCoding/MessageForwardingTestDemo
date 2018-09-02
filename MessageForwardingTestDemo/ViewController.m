@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "TestViewController.h"
+#import "ClassA.h"
+#import "ClassB.h"
 
 @interface ViewController ()
 
@@ -23,6 +25,12 @@
 
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"test" style:UIBarButtonItemStyleDone target:self action:@selector(jumpToTestPage)];
     self.navigationItem.rightBarButtonItem = rightItem;
+    
+    ClassB *classB = [[ClassB alloc] init];
+    [classB test];
+    [classB test2];
+    [classB test3];
+    [classB test4];
 }
 
 - (void)jumpToTestPage {
