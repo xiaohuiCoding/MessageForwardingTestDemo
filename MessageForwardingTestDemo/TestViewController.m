@@ -23,12 +23,20 @@
     [super viewDidAppear:animated];
 
     People *p = [[People alloc] init];
+//    [p eat];
     
-    [p workIn:@"公司"];
+//    MyStruct myStruct = {"小明",18};
+//    [p test2:myStruct];
+    
+    MyStruct myStruct2 = [p test3:myStruct];
+    NSLog(@"name=%s,age=%d",myStruct2.name,myStruct2.age);
+    
+//    [p workIn:@"公司"];
+//    [p sleepOn:@"床" when:@"晚上"];
 //    [p test];
     
     
-    [Tree becomeTall];
+//    [Tree becomeTall];
 //    [Tree test];
 }
 

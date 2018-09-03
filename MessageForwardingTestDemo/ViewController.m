@@ -10,6 +10,8 @@
 #import "TestViewController.h"
 #import "ClassA.h"
 #import "ClassB.h"
+#import "Person.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
@@ -31,6 +33,18 @@
     [classB test2];
     [classB test3];
     [classB test4];
+    
+    
+    
+    //获取类的运行时属性
+    unsigned int count;
+    objc_property_t *properties = class_copyPropertyList([Person class], &count);
+    NSLog(@"%d",count);
+    for (NSInteger i=0; i<count; i++) {
+        NSString *name = @(property_getName(properties[i]));
+        NSString *attributes = @(property_getAttributes(properties[i]));
+        NSLog(@"%@ --- %@",name, attributes);
+    }
 }
 
 - (void)jumpToTestPage {

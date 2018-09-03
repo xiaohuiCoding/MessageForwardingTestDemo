@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "BaseObject.h"
 
+typedef struct MyStruct {
+    char *name;
+    int age;
+} MyStruct;
+
 @interface People : NSObject
 
 - (void)eat;
@@ -16,6 +21,8 @@
 - (void)sleepOn:(NSString *)place when:(NSString *)time;
 
 - (char *)test;
+- (void)test2:(MyStruct)test;
+- (MyStruct)test3:(MyStruct)test;
 
 - (void)drink;
 - (void)playIn:(NSString *)place;

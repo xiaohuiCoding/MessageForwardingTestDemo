@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MessageForwardingTestDemo/NSObject+MessageForwardingHandler.m"
-            timestampString = "557592287.538837"
+            filePath = "MessageForwardingTestDemo/People.m"
+            timestampString = "557660086.403496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "+methodSignatureForSelectorNew:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MessageForwardingTestDemo/NSObject+MessageForwardingHandler.m"
-            timestampString = "557592287.53892"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-methodSignatureForSelectorNew:"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-forwardInvocation:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
