@@ -59,14 +59,15 @@
     
     //给对象添加属性和方法
     Person *p = [[Person alloc] init];
-    [p setName:@"xiaohui"];
+    [p other];
+    p.name = @"xiaohui";
     NSLog(@"新增对象的属性：name = %@",p.name);
     [p eatFood];
     [Person eatFood];
     
     
     //给类添加属性和方法
-    [Person setAssociatedObjc:@"heiheihei"];
+    Person.associatedObjc = @"heiheihei";
     NSLog(@"新增类的属性：associatedObjc = %@",Person.associatedObjc);
     
     

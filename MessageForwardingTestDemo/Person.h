@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Person : NSObject
+{
+    NSString *nameString; //可以这样给类直接添加成员变量
+}
 
 @property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, assign) int age;
@@ -18,5 +21,7 @@
 @property (nonatomic, assign) BOOL isChinese;
 
 - (void)launch;
+
+- (void)other;
 
 @end

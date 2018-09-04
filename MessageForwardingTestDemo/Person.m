@@ -22,4 +22,10 @@
     NSLog(@"this method only execute once");
 }
 
+- (void)other {
+    //成员变量的使用
+    self->nameString = @"xiaohui";
+    NSLog(@"成员变量：nameString = %@",self->nameString);
+}
+
 @end
