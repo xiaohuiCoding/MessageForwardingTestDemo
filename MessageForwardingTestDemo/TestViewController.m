@@ -25,8 +25,8 @@
     People *p = [[People alloc] init];
 //    [p eat];
     
-//    MyStruct myStruct = {"小明",18};
-//    [p test2:myStruct];
+    MyStruct myStruct = {"小明",18};
+    [p test2:myStruct];
     
     MyStruct myStruct2 = [p test3:myStruct];
     NSLog(@"name=%s,age=%d",myStruct2.name,myStruct2.age);
