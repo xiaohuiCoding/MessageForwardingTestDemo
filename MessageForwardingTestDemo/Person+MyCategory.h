@@ -14,5 +14,9 @@
 //@property (nonatomic, copy) NSString *smallName; //Property 'smallName' requires method 'smallName' to be defined - use @dynamic
 
 - (void)eatFood;
++ (void)eatFood;
+
++ (void)setAssociatedObjc:(NSString *)associatedObjc;
++ (NSString *)associatedObjc;
 
 @end

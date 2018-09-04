@@ -14,24 +14,40 @@ const void *kNameKey = &kNameKey;
 
 @implementation Person (MyCategory)
 
-#pragma mark - use runtime to add property for this class
+#pragma mark - use runtime to add property for this class object
 
 - (void)setName:(NSString *)name {
     objc_setAssociatedObject(self, kNameKey, name, OBJC_ASSOCIATION_COPY_NONATOMIC);
 //    objc_setAssociatedObject(self, &kNameKey, name, OBJC_ASSOCIATION_COPY_NONATOMIC);
+//    objc_setAssociatedObject(self, @selector(name), name, OBJC_ASSOCIATION_COPY_NONATOMIC);
 //    objc_setAssociatedObject(self, "name", name, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (NSString *)name {
     return objc_getAssociatedObject(self, kNameKey);
 //    return objc_getAssociatedObject(self, &kNameKey);
+//    return objc_getAssociatedObject(self, @selector(name));
 //    return objc_getAssociatedObject(self, "name");
 }
 
-#pragma mark - directly to add method for this class
+#pragma mark - directly to add instance method for this class
 
 - (void)eatFood {
-    NSLog(@"method 'eatFood' execute");
+    NSLog(@"instance method 'eatFood' execute");
+}
+
++ (void)eatFood {
+    NSLog(@"class method 'eatFood' execute");
+}
+
+#pragma mark - use runtime to add property for this class
+
++ (void)setAssociatedObjc:(NSString *)associatedObjc {
+    objc_setAssociatedObject(self, @selector(associatedObjc), associatedObjc, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
++ (NSString *)associatedObjc {
+    return objc_getAssociatedObject(self, @selector(associatedObjc));
 }
 
 @end
