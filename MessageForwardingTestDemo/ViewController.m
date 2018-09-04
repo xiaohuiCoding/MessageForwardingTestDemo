@@ -12,6 +12,7 @@
 #import "ClassB.h"
 #import "Person.h"
 #import <objc/runtime.h>
+#import "Person+MyCategory.h"
 
 @interface ViewController ()
 
@@ -37,16 +38,22 @@
     [classB test4];
     
     
-    
     //获取类的运行时属性
     unsigned int count;
     objc_property_t *properties = class_copyPropertyList([Person class], &count);
-    NSLog(@"%d",count);
+    NSLog(@"属性的个数是：%d",count);
     for (NSInteger i=0; i<count; i++) {
         NSString *name = @(property_getName(properties[i]));
         NSString *attributes = @(property_getAttributes(properties[i]));
-        NSLog(@"%@ --- %@",name, attributes);
+        NSLog(@"属性：%@ --- %@",name, attributes);
     }
+    
+    
+    //给类添加属性和方法
+    Person *p = [[Person alloc] init];
+    p.name = @"xiaohui";
+    NSLog(@"新增的属性：name=%@",p.name);
+    [p eatFood];
 }
 
 - (void)jumpToTestPage {

@@ -11,7 +11,6 @@
 @interface Person : NSObject
 
 @property (nonatomic, assign) NSInteger ID;
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) int age;
 @property (nonatomic, assign) char hobby;
 @property (nonatomic, assign) float height;

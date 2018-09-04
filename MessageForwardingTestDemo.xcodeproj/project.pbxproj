@@ -29,6 +29,7 @@
 		4B903ED421366519001E26D4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B903ED221366519001E26D4 /* Main_iPhone.storyboard */; };
 		4B903EE02136A195001E26D4 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EDF2136A195001E26D4 /* TestViewController.m */; };
 		4B903EE6213CF8CA001E26D4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EE5213CF8CA001E26D4 /* Person.m */; };
+		4BFE67D7213E5CE3003D2F82 /* Person+MyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE67D6213E5CE3003D2F82 /* Person+MyCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		4B903EDF2136A195001E26D4 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		4B903EE4213CF8CA001E26D4 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		4B903EE5213CF8CA001E26D4 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		4BFE67D5213E5CE3003D2F82 /* Person+MyCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+MyCategory.h"; sourceTree = "<group>"; };
+		4BFE67D6213E5CE3003D2F82 /* Person+MyCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+MyCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				4B903EBF2136608B001E26D4 /* CustomIOSAlertView.m */,
 				4B903EE4213CF8CA001E26D4 /* Person.h */,
 				4B903EE5213CF8CA001E26D4 /* Person.m */,
+				4BFE67D5213E5CE3003D2F82 /* Person+MyCategory.h */,
+				4BFE67D6213E5CE3003D2F82 /* Person+MyCategory.m */,
 				4B903E5C2133C18A001E26D4 /* ViewController.h */,
 				4B903E5D2133C18A001E26D4 /* ViewController.m */,
 				4B903EDE2136A195001E26D4 /* TestViewController.h */,
@@ -337,6 +342,7 @@
 				4B393F17213C238B00B28D4E /* ClassA.m in Sources */,
 				4B903E9F21351B89001E26D4 /* Tree.m in Sources */,
 				4B903E5E2133C18A001E26D4 /* ViewController.m in Sources */,
+				4BFE67D7213E5CE3003D2F82 /* Person+MyCategory.m in Sources */,
 				4B903EE6213CF8CA001E26D4 /* Person.m in Sources */,
 				4B903EAE213653C2001E26D4 /* BaseObject.m in Sources */,
 				4B903EAB2136527C001E26D4 /* NSObject+MessageForwardingHandler.m in Sources */,
