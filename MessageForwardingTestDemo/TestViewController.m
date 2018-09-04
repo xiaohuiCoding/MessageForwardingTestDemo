@@ -25,11 +25,11 @@
     People *p = [[People alloc] init];
 //    [p eat];
     
-    MyStruct myStruct = {"小明",18};
+    MyStruct myStruct = {111,"打篮球",18,180.0,160.00,1};
     [p test2:myStruct];
     
     MyStruct myStruct2 = [p test3:myStruct];
-    NSLog(@"name=%s,age=%d",myStruct2.name,myStruct2.age);
+    NSLog(@"test3: struct=%s",@encode(typeof(myStruct2)));
     
 //    [p workIn:@"公司"];
 //    [p sleepOn:@"床" when:@"晚上"];

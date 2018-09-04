@@ -53,7 +53,7 @@ char * dynamicMethodIMPTest(id self, SEL _cmd) {
 }
 
 void dynamicMethodIMPTest2(id self, SEL _cmd, MyStruct s) {
-    NSLog(@"name=%s,age=%d",s.name,s.age);
+    NSLog(@"test2: struct=%s",@encode(typeof(s)));
 }
 
 MyStruct dynamicMethodIMPTest3(id self, SEL _cmd, MyStruct s) {
@@ -77,10 +77,10 @@ MyStruct dynamicMethodIMPTest3(id self, SEL _cmd, MyStruct s) {
         class_addMethod(self, sel, (IMP)dynamicMethodIMPTest, "c@:");
         return YES;
     } else if (sel == @selector(test2:)) {
-        class_addMethod(self, sel, (IMP)dynamicMethodIMPTest2, "v@:");
+        class_addMethod(self, sel, (IMP)dynamicMethodIMPTest2, "v@:{MyStruct=q*ifdB}");
         return YES;
     } else if (sel == @selector(test3:)) {
-        class_addMethod(self, sel, (IMP)dynamicMethodIMPTest3, "v@:");
+        class_addMethod(self, sel, (IMP)dynamicMethodIMPTest3, "{MyStruct=q*ifdB}@:{MyStruct=q*ifdB}");
         return YES;
     } else {
         return [super resolveInstanceMethod:sel];

@@ -10,8 +10,14 @@
 #import "BaseObject.h"
 
 typedef struct MyStruct {
-    char *name;
+    NSInteger ID;
+//    NSString *name; //ARC forbids Objective-C objects in struct
+    char *hobby;
+//    char hobby2;
     int age;
+    float height;
+    double weight;
+    bool isChinese;
 } MyStruct;
 
 @interface People : NSObject

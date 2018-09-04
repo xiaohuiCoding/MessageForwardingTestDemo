@@ -28,6 +28,8 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"test" style:UIBarButtonItemStyleDone target:self action:@selector(jumpToTestPage)];
     self.navigationItem.rightBarButtonItem = rightItem;
     
+    
+    //self与super
     ClassB *classB = [[ClassB alloc] init];
     [classB test];
     [classB test2];
