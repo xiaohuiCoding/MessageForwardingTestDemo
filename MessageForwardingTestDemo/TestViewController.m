@@ -23,20 +23,21 @@
     [super viewDidAppear:animated];
 
     People *p = [[People alloc] init];
-//    [p eat];
-    
-    MyStruct myStruct = {111,"打篮球",18,180.0,160.00,1};
-    [p test2:myStruct];
-    
-    MyStruct myStruct2 = [p test3:myStruct];
-    NSLog(@"test3: struct=%s",@encode(typeof(myStruct2)));
+    [p eat];
     
 //    [p workIn:@"公司"];
 //    [p sleepOn:@"床" when:@"晚上"];
 //    [p test];
     
+//    MyStruct myStruct = {111, 18, "打篮球", 180.0, 160.00, 1};
+//    [p test2:myStruct];
+//
+//    MyStruct myStruct2 = [p test3:myStruct];
+//    NSLog(@"test3: struct=%s",@encode(typeof(myStruct2)));
     
-//    [Tree becomeTall];
+
+    
+    [Tree becomeTall];
 //    [Tree test];
 }
 

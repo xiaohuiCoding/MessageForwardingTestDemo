@@ -12,9 +12,8 @@
 typedef struct MyStruct {
     NSInteger ID;
 //    NSString *name; //ARC forbids Objective-C objects in struct
-    char *hobby;
-//    char hobby2;
     int age;
+    char *hobby;
     float height;
     double weight;
     bool isChinese;
@@ -43,6 +42,6 @@ typedef struct MyStruct {
 - (void)walk:(NSInteger)distance;
 
 - (void)normal;
-- (void)crashHaHaHa;
+- (void)crash;
 
 @end
