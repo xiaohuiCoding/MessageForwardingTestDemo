@@ -20,6 +20,14 @@
 
 @implementation ViewController
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    Person *p = [[Person alloc] init];
+    [p launch];
+    NSLog(@"%s",__func__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -60,6 +68,12 @@
     //给类添加属性和方法
     [Person setAssociatedObjc:@"heiheihei"];
     NSLog(@"新增类的属性：associatedObjc = %@",Person.associatedObjc);
+    
+    
+    //测试在一个对象的生命周期中多次调用对象的同一方法
+    [p launch];
+    [p launch];
+    NSLog(@"%s",__func__);
 }
 
 - (void)jumpToTestPage {

@@ -17,4 +17,6 @@
 @property (nonatomic, assign) double weight;
 @property (nonatomic, assign) BOOL isChinese;
 
+- (void)launch;
+
 @end
