@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "People.h"
 
 @interface AppDelegate ()
 
@@ -24,11 +23,6 @@
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = navC;
     [self.window makeKeyAndVisible];
-    
-//    People *p = [[People alloc] init];
-//
-//    //1.动态添加实例方法
-//    [p eat];
     return YES;
 }
 

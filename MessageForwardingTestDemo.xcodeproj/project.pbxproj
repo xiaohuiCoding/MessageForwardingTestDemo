@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B393F17213C238B00B28D4E /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B393F16213C238B00B28D4E /* ClassA.m */; };
-		4B393F1A213C239F00B28D4E /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B393F19213C239F00B28D4E /* ClassB.m */; };
 		4B903E5B2133C18A001E26D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E5A2133C18A001E26D4 /* AppDelegate.m */; };
 		4B903E5E2133C18A001E26D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903E5D2133C18A001E26D4 /* ViewController.m */; };
 		4B903E632133C18A001E26D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B903E622133C18A001E26D4 /* Assets.xcassets */; };
@@ -24,13 +22,9 @@
 		4B903EA521354BE5001E26D4 /* Computer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EA421354BE5001E26D4 /* Computer.m */; };
 		4B903EAB2136527C001E26D4 /* NSObject+MessageForwardingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EAA2136527C001E26D4 /* NSObject+MessageForwardingHandler.m */; };
 		4B903EAE213653C2001E26D4 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EAD213653C2001E26D4 /* BaseObject.m */; };
-		4B903ECF2136608B001E26D4 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EBF2136608B001E26D4 /* CustomIOSAlertView.m */; };
 		4B903ED321366519001E26D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B903ED121366519001E26D4 /* LaunchScreen.storyboard */; };
 		4B903ED421366519001E26D4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B903ED221366519001E26D4 /* Main_iPhone.storyboard */; };
 		4B903EE02136A195001E26D4 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EDF2136A195001E26D4 /* TestViewController.m */; };
-		4B903EE6213CF8CA001E26D4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B903EE5213CF8CA001E26D4 /* Person.m */; };
-		4BFE67D7213E5CE3003D2F82 /* Person+MyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE67D6213E5CE3003D2F82 /* Person+MyCategory.m */; };
-		4BFE67DA213FB62B003D2F82 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE67D9213FB62B003D2F82 /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4B393F15213C238B00B28D4E /* ClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
-		4B393F16213C238B00B28D4E /* ClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
-		4B393F18213C239F00B28D4E /* ClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassB.h; sourceTree = "<group>"; };
-		4B393F19213C239F00B28D4E /* ClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassB.m; sourceTree = "<group>"; };
 		4B903E562133C18A001E26D4 /* MessageForwardingTestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageForwardingTestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B903E592133C18A001E26D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B903E5A2133C18A001E26D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,18 +76,10 @@
 		4B903EAA2136527C001E26D4 /* NSObject+MessageForwardingHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MessageForwardingHandler.m"; sourceTree = "<group>"; };
 		4B903EAC213653C2001E26D4 /* BaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
 		4B903EAD213653C2001E26D4 /* BaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
-		4B903EBE2136608B001E26D4 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOSAlertView.h; sourceTree = "<group>"; };
-		4B903EBF2136608B001E26D4 /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOSAlertView.m; sourceTree = "<group>"; };
 		4B903ED121366519001E26D4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B903ED221366519001E26D4 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4B903EDE2136A195001E26D4 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4B903EDF2136A195001E26D4 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		4B903EE4213CF8CA001E26D4 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		4B903EE5213CF8CA001E26D4 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		4BFE67D5213E5CE3003D2F82 /* Person+MyCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+MyCategory.h"; sourceTree = "<group>"; };
-		4BFE67D6213E5CE3003D2F82 /* Person+MyCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+MyCategory.m"; sourceTree = "<group>"; };
-		4BFE67D8213FB62B003D2F82 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		4BFE67D9213FB62B003D2F82 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,14 +132,6 @@
 			children = (
 				4B903E592133C18A001E26D4 /* AppDelegate.h */,
 				4B903E5A2133C18A001E26D4 /* AppDelegate.m */,
-				4B903EBE2136608B001E26D4 /* CustomIOSAlertView.h */,
-				4B903EBF2136608B001E26D4 /* CustomIOSAlertView.m */,
-				4B903EE4213CF8CA001E26D4 /* Person.h */,
-				4B903EE5213CF8CA001E26D4 /* Person.m */,
-				4BFE67D5213E5CE3003D2F82 /* Person+MyCategory.h */,
-				4BFE67D6213E5CE3003D2F82 /* Person+MyCategory.m */,
-				4BFE67D8213FB62B003D2F82 /* Test.h */,
-				4BFE67D9213FB62B003D2F82 /* Test.m */,
 				4B903E5C2133C18A001E26D4 /* ViewController.h */,
 				4B903E5D2133C18A001E26D4 /* ViewController.m */,
 				4B903EDE2136A195001E26D4 /* TestViewController.h */,
@@ -180,10 +154,6 @@
 				4B903EAA2136527C001E26D4 /* NSObject+MessageForwardingHandler.m */,
 				4B903EAC213653C2001E26D4 /* BaseObject.h */,
 				4B903EAD213653C2001E26D4 /* BaseObject.m */,
-				4B393F15213C238B00B28D4E /* ClassA.h */,
-				4B393F16213C238B00B28D4E /* ClassA.m */,
-				4B393F18213C239F00B28D4E /* ClassB.h */,
-				4B393F19213C239F00B28D4E /* ClassB.m */,
 				4B903E622133C18A001E26D4 /* Assets.xcassets */,
 				4B903E672133C18A001E26D4 /* Info.plist */,
 				4B903E682133C18A001E26D4 /* main.m */,
@@ -344,12 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B903E902133D2F3001E26D4 /* People.m in Sources */,
-				4B393F17213C238B00B28D4E /* ClassA.m in Sources */,
-				4BFE67DA213FB62B003D2F82 /* Test.m in Sources */,
 				4B903E9F21351B89001E26D4 /* Tree.m in Sources */,
 				4B903E5E2133C18A001E26D4 /* ViewController.m in Sources */,
-				4BFE67D7213E5CE3003D2F82 /* Person+MyCategory.m in Sources */,
-				4B903EE6213CF8CA001E26D4 /* Person.m in Sources */,
 				4B903EAE213653C2001E26D4 /* BaseObject.m in Sources */,
 				4B903EAB2136527C001E26D4 /* NSObject+MessageForwardingHandler.m in Sources */,
 				4B903E932133D5E1001E26D4 /* Dog.m in Sources */,
@@ -357,11 +323,9 @@
 				4B903E5B2133C18A001E26D4 /* AppDelegate.m in Sources */,
 				4B903E9C2133F796001E26D4 /* NSObject+ViewController.m in Sources */,
 				4B903EA221351BB5001E26D4 /* Flower.m in Sources */,
-				4B393F1A213C239F00B28D4E /* ClassB.m in Sources */,
 				4B903EA521354BE5001E26D4 /* Computer.m in Sources */,
 				4B903E962133F723001E26D4 /* UIScrollView+MethodForwarding.m in Sources */,
 				4B903EE02136A195001E26D4 /* TestViewController.m in Sources */,
-				4B903ECF2136608B001E26D4 /* CustomIOSAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

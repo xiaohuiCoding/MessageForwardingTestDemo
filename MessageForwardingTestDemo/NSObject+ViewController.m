@@ -7,7 +7,6 @@
 //
 
 #import "NSObject+ViewController.h"
-#import "UIScrollView+MethodForwarding.h"
 
 @implementation NSObject (ViewController)
 

@@ -8,9 +8,6 @@
 
 #import "NSObject+MessageForwardingHandler.h"
 #import <objc/runtime.h>
-#import <UIKit/UIKit.h>
-#import "People.h"
-#import "CustomIOSAlertView.h"
 
 @implementation NSObject (MessageForwardingHandler)
 
@@ -40,32 +37,12 @@ int count;
 }
 
 - (void)dynamicMethodIMP {
-    count = 1;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        CustomIOSAlertView *alertView = [[CustomIOSAlertView alloc] init];
-        UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 240, 240)];
-        customView.backgroundColor = [UIColor redColor];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 240, 30)];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.text = [NSString stringWithFormat:@"程序出现了%d个异常，您可选择",count];
-        [customView addSubview:label];
-        [alertView setContainerView:customView];
-        [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"关闭程序", @"暂时忽略", nil]];
-        [alertView setOnButtonTouchUpInside:^(CustomIOSAlertView *alertView, int buttonIndex) {
-            if (buttonIndex == 0) {
-                People *p = [[People alloc] init];
-                [p crash];
-            }
-            [alertView close];
-        }];
-        [alertView show];
-        ++ count;
-    });
+    NSLog(@"消息转发成功，这是新消息！");
 }
 
 - (NSMethodSignature *)methodSignatureForSelectorNew:(SEL)aSelector {
     NSString *selectorString = NSStringFromSelector(aSelector);
-    if (selectorString && selectorString.length > 0 && ![selectorString isEqualToString:@"crash"]) {
+    if (selectorString && selectorString.length > 0) {
         NSMethodSignature *methodSignature = [NSMethodSignature signatureWithObjCTypes:"v@:"];
         return methodSignature;
     } else {
@@ -76,14 +53,14 @@ int count;
 - (void)forwardInvocationNew:(NSInvocation *)anInvocation {
     NSLog(@"成功捕获到一个异常，该异常的诊断是 ---> 'reason: -[%@ %@]: unrecognized selector sent to instance %p' \n诊断结果来自方法 ---> '%s'",NSStringFromClass([self class]), NSStringFromSelector(anInvocation.selector), self, __func__);
     NSString *selectorString = NSStringFromSelector(anInvocation.selector);
-    if (selectorString && selectorString.length > 0 && ![selectorString isEqualToString:@"crash"]) {
+    if (selectorString && selectorString.length > 0) {
         [self dynamicMethodIMP];
     }
 }
 
 + (NSMethodSignature *)methodSignatureForSelectorNew:(SEL)aSelector {
     NSString *selectorString = NSStringFromSelector(aSelector);
-    if (selectorString && selectorString.length > 0 && ![selectorString isEqualToString:@"crash"]) {
+    if (selectorString && selectorString.length > 0) {
         NSMethodSignature *methodSignature = [NSMethodSignature signatureWithObjCTypes:"v@:"];
         return methodSignature;
     } else {
@@ -94,7 +71,7 @@ int count;
 + (void)forwardInvocationNew:(NSInvocation *)anInvocation {
     NSLog(@"成功捕获到一个异常，该异常的诊断是 ---> 'reason: +[%@ %@]: unrecognized selector sent to class %p' \n诊断结果来自方法 ---> '%s'",NSStringFromClass(self), NSStringFromSelector(anInvocation.selector), self, __func__);
     NSString *selectorString = NSStringFromSelector(anInvocation.selector);
-    if (selectorString && selectorString.length > 0 && ![selectorString isEqualToString:@"crash"]) {
+    if (selectorString && selectorString.length > 0) {
         [self dynamicMethodIMP];
     }
 }

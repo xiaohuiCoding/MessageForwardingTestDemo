@@ -42,6 +42,5 @@ typedef struct MyStruct {
 - (void)walk:(NSInteger)distance;
 
 - (void)normal;
-- (void)crash;
 
 @end
